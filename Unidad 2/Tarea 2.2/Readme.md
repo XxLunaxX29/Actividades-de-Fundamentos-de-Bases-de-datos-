@@ -125,95 +125,41 @@ El diagrama EER incorpora tres abstracciones estructurales fundamentales:
 
 La transición del paradigma conceptual Entidad-Relación al modelado orientado a objetos en **UML (Unified Modeling Language)** permite traducir entidades, atributos y asociaciones en clases con propiedades tipadas, métodos de comportamiento y relaciones estructurales formales (generalización, composición y agregación). 
 ```mermaid
-flowchart TD 
+classDiagram 
 %% ========================================== 
-%% 1\. ENTIDADES PRINCIPALES (RECTÁNGULOS) 
+%% 1\. DEFINICIÓN DE CLASES Y ATRIBUTOS 
 %% ========================================== 
-TIPO\_USUARIO[TIPO\_USUARIO] 
-USUARIO[USUARIO] 
-TELEFONO[TELEFONO] 
-CLIENTE[CLIENTE] 
-EMPLEADO[EMPLEADO] 
-LOCKER[LOCKER] 
-RUTINA[RUTINA] 
+
+class TipoUsuario { int idTipoUsuario string descripcion }
+
+class Usuario { int idUsuario string nombre string apellidoPaterno string apellidoMaterno }
+class Telefono { int idTelefono string numero string descripcion }
+class Cliente { string estado }
+class Empleado { string puesto float salario }
+class Membresia { int idMembresia string tipo float costo int duracion }
+class PagoMembresia { int idPago date fechaPago date vigenciaSuscripcion calcularVigencia() }
+class Locker { int idLocker string numeroLocker }
+class Rutina { int idRutina string dificultad string objetivo string descripcion }
+
 %% ========================================== 
-%% 2\. ATRIBUTOS CONCEPTUALES (ÓVALOS) 
-%% ========================================== 
-%% USUARIO (Atributo Compuesto: Nombre) 
-A\_ID\_U([ID\_Usuario - PK]) --- USUARIO 
-A\_IDTP\_U([ID_Tipo_Usuario - FK]) ---USUARIO
-A\_Nom\_U([Nombre]) --- USUARIO 
-A\_AP\_U([Apellido Paterno]) ---USUARIO
-A\_AM\_U([Apellido Materno]) ---USUARIO
-%% TELEFONO (Multivalorado) 
-A\_ID\_TEL([ID\_Telefono - PK]) --- TELEFONO 
-A\_IDU\_TEL([ID_Usuario-FK]) ---TELEFONO
-A\_NUM([Numero]) --- TELEFONO 
-A\_DES([Descripcion]) --- TELEFONO
-%% TIPO\_USUARIO 
-A\_ID\_TU([ID\_TipoUsuario - PK]) --- TIPO\_USUARIO 
-A\_DESC\_TU([Descripcion]) --- TIPO\_USUARIO 
-%% CLIENTE 
-A\_EST([Estado]) --- CLIENTE 
-%% EMPLEADO 
-A\_PUESTO([Puesto]) --- EMPLEADO 
-A\_SAL([Salario]) --- EMPLEADO 
-%% LOCKER 
-A\_ID\_L([ID\_Locker - PK]) --- LOCKER 
-A\_NUM\_L([Numero Locker]) --- LOCKER 
-%% RUTINA 
-A\_ID\_R([ID\_Rutina - PK]) --- RUTINA 
-A\_IDE\_([IDEmpleado]) ---RUTINA
-A\_DIF([Dificultad]) --- RUTINA 
-A\_OBJ([Objetivo]) --- RUTINA 
-A\_DESC\_R([Descripcion]) --- RUTINA 
-%% ========================================== 
-%% 3\. ESPECIALIZACIÓN DISJUNTA (HERENCIA EER) 
-%% ========================================== 
-USUARIO --- DISJUNTO(( d )) 
-DISJUNTO --- CLIENTE 
-DISJUNTO --- EMPLEADO 
-%% ========================================== 
-%% 4\. RELACIONES GENERALES 
-%% ========================================== 
-TIPO\_USUARIO ---|1| R\_CLAS{CLASIFICA} 
-R\_CLAS ---|N| USUARIO 
-USUARIO ---|1| R\_TIENE{TIENE} 
-R\_TIENE ---|N| TELEFONO 
-%% ========================================== 
-%% 5\. AGREGACIÓN: CONTRATACIÓN VIGENTE 
+%% 2\. RELACIONES UML (HERENCIA, COMPOSICIÓN, AGREGACIÓN) 
 %% ==========================================
+Usuario <|-- Cliente : hereda 
+Usuario <|-- Empleado : hereda
 
-subgraph AGREGACION [AGREGACION CONTRATACION VIGENTE]
-MEMBRESIA[MEMBRESIA] 
-R\_PAGO[PAGO\_MEMBRESIA]
-
-%% Atributos Membresía 
-A\_ID\_M([ID\_Membresia - PK]) --- MEMBRESIA 
-A\_TIPO\_M([Tipo]) --- MEMBRESIA 
-A\_COSTO\_M([Costo]) --- MEMBRESIA 
-A\_DUR\_M([Duracion]) --- MEMBRESIA 
-%% Atributos Pago de Membresía 
-A\_ID\_P([ID\_Pago - PK]) --- R\_PAGO 
-A\_FECHA\_P([Fecha Pago]) --- R\_PAGO 
-A\_VIG\_P([Vigencia Suscripcion - Derivado]) --- R\_PAGO 
-CLIENTE --- R\_PAGO 
-EMPLEADO --- R\_PAGO 
-MEMBRESIA --- R\_PAGO 
-end 
-%% ========================================== 
-%% 6\. ASIGNACIÓN DE LOCKER DESDE LA AGREGACIÓN 
-%% ========================================== 
-AGREGACION ---|1| R\_ASIG\_L{ASIGNADO\_A} 
-R\_ASIG\_L ---|1| LOCKER 
-%% ========================================== 
-%% 7\. DISEÑO Y ASIGNACIÓN DE RUTINAS 
-%% ========================================== 
-EMPLEADO ---|1| R\_DIS{DISEÑA} 
-R\_DIS ---|N| RUTINA 
-
-CLIENTE ---|1| R\_ASIG\_R{ASIGNADA} 
-R\_ASIG\_R ---|N| RUTINA
+%% Composición (Atributo multivalorado dependiente) 
+Usuario "1" *-- "1..*" Telefono : posee
+%% Asociación simple con Tipo de Usuario 
+TipoUsuario "1" <-- "0..*" Usuario : clasifica
+%% Asociaciones de la Transacción de Cobro 
+Cliente "1" --> "0..*" PagoMembresia : realiza 
+Empleado "1" --> "0..*" PagoMembresia : atiende 
+Membresia "1" --> "0..*" PagoMembresia : contratada
+%% Agregación (Asignación de casillero a la contratación activa) 
+PagoMembresia "0..1" o-- "0..1" Locker : asigna 
+%% Asociaciones de Rutinas 
+Empleado "1" --> "0..*" Rutina : disena 
+Cliente "0..*" --> "0..\*" Rutina : asignada
 ```
 
 ### Matriz de Correspondencia Directa: EER vs. UML 
