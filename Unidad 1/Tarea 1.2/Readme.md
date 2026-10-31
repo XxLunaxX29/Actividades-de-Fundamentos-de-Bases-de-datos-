@@ -211,4 +211,4 @@ _graphevery_. (s.f.). Obtenido de https://www.grapheverywhere.com/tipos-bases-de
 
 _hostingplus_. (s.f.). Obtenido de https://www.hostingplus.mx/blog/clasificacion-de-las-bases-de-datos-conoce-todos-los-tipos/ 
 
-_studocu_. (s.f.). Obtenido de https://www.studocu.com/es-mx/document/instituto-tecnologico-de-orizaba/base-de-datos/arquitectura-de-un-sistema/28001759?sid=%24device%3A19345b4ab241471-0c14e610f2a36c- 46524258-144000-19345b4ab2414711787865198 
+_studocu_. (s.f.). Obtenido de https://www.studocu.com/es-mx/document/instituto-tecnologico-de-orizaba/base-de-datos/arquitectura-de-un-sistema/28001759?sid=%24device%3A19345b4ab241471-0c14e610f2a36c-46524258-144000-19345b4ab2414711787865198 
