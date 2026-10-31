@@ -98,5 +98,7 @@ godaddy. (s.f.). Obtenido de https://www.godaddy.com/resources/latam/stories/que
 
 immune. (s.f.). Obtenido de https://immune.institute/blog/base-de-datos-que-es-usos/
 
-infranet. (s.f.). Obtenido de https://blog.infranetworking.com/objetivos-base-de-datos/studocudocument. (s.f.). Obtenido de https://www.studocu.com/es-mx/document/universidad-tecnologica-de-tabasco/base-de- datos/introduccion-a-las-bases-de- datos/32573382?sid=%24device%3A19345b4ab241471-0c14e610f2a36c-46524258-144000-19345b4ab2414711787798340
+infranet. (s.f.). Obtenido de https://blog.infranetworking.com/objetivos-base-de-datos/
+
+studocudocument. (s.f.). Obtenido de https://www.studocu.com/es-mx/document/universidad-tecnologica-de-tabasco/base-de- datos/introduccion-a-las-bases-de- datos/32573382?sid=%24device%3A19345b4ab241471-0c14e610f2a36c-46524258-144000-19345b4ab2414711787798340
 dad 1.1 U_1.md…]()
