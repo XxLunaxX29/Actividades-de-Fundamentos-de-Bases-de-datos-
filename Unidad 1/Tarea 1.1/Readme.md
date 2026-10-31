@@ -14,7 +14,7 @@ Materia: Fundamentos Bases de Datos Actividades U.1 â€“ Tareas 1.1 Maestro: RubÃ
 # Tarea 1.1: Fundamentos, objetivos y modelos de bases de datos 
 
 ## Mapa conceptual sobre los conceptos fundamentales, objetivos, usos y aplicaciones de las bases de datos 
-```mermide
+```mermaid
 flowchart TD
     root["<b>Base de datos"]
 
