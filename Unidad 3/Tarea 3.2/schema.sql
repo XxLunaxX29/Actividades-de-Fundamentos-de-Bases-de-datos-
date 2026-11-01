@@ -4,9 +4,9 @@
 -- Proyecto: Sistema de Gestión de Gimnasios
 -- Basado en: Actividad 3.2 - Generación del Esquema Físico y Script LDD
 -- ============================================================================
-CREATE DATABASE GimnasioDB;
+CREATE DATABASE GIMNASIO;
 GO
-USE GimnasioDB;
+USE GIMNASIO;
 GO
 
 
