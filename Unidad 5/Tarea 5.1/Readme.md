@@ -18,7 +18,7 @@ flowchart TD
     %% ==========================================
     %% NODO PRINCIPAL Y DEFINICIÓN SUPERIOR
     %% ==========================================
-    TITULO["#128202; <b>ÁLGEBRA RELACIONAL</b>"]
+    TITULO["<b>ÁLGEBRA RELACIONAL</b>"]
     DEF["<b>¿Qué es?</b><br />Lenguaje formal procedimental de consulta basado en la teoría de conjuntos y lógica de predicados.<br /><i>Propiedad de clausura:</i> Toma relaciones como entrada y produce siempre una nueva relación como resultado."]
     
     TITULO --- DEF
