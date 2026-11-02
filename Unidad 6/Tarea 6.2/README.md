@@ -1,10 +1,10 @@
 # Sistema de Gestión de Gimnasios (`gimnasio_normalizado`)
 **Materia:** Fundamentos de Bases de Datos  
-**Maestro: Rubén Miguel Riojas Rodriguez
+**Maestro:** Rubén Miguel Riojas Rodriguez
 **Motor SGBD:** Microsoft SQL Server / SQL Server Express (Transact-SQL)  
 **Entorno de Ejecución:** SQL Server Management Studio (SSMS) / Azure Data Studio  
-**Alumno: José Luis Luna García
-**Matricula: I24050385
+**Alumno:** José Luis Luna García
+**Matricula:** I24050385
 ---
 
 ##Descripción del Proyecto
