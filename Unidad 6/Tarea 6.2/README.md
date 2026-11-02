@@ -45,5 +45,12 @@ Abre tu terminal o consola Git y ejecuta:
 git clone [suspicious link removed]
 cd Actividades-de-Fundamentos-de-Bases-de-datos-/Unidad 6/Tarea 6.2
 ```
-
+### 2. Abrir los scripts SQL directamente desde la terminal 
+Una vez ubicado dentro de la carpeta \`Tarea 6.2\`, puedes abrir automáticamente cada script en **SQL Server Management Studio (SSMS)** o en tu editor SQL predeterminado ejecutando los siguientes comandos en orden secuencial: 
+#### En Windows (CMD o PowerShell): 
+```cmd
+start 01_schema_ddl.sql
+start 02_data_inserts.sql
+start 03_queries_dml.sql
+```
 ###
