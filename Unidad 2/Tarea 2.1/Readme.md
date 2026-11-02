@@ -46,15 +46,8 @@ Las siguientes reglas de negocio normativas rigen la lógica de operación del c
 
 El modelo se compone de entidades principales y una tipificación rigurosa de sus atributos: 
 
-- **Atributos Clave (Primary Keys):** Identificadores primarios únicos (PK) definidos en cada una de las entidades del sistema (USUARIO, TIPO\_USUARIO, 
-
-| TELEFONO, CLIENTE,  | EMPLEADO,  | LOCKER, MEMBRESIA,  |
-| --- | --- | --- |
-| PAGO\_MEMBRESIA y RUTINA). |  |  |
-| desglosa formalmente en  | NOMBRE,  | APELLIDO\_PATERNO y  |
-
-APELLIDO\_MATERNO para facilitar la búsqueda, ordenamiento y consistencia de registros. 
-
+- **Atributos Clave (Primary Keys):** Identificadores primarios únicos (PK) definidos en cada una de las entidades del sistema (USUARIO, TIPO\_USUARIO, TELEFONO, CLIENTE, EMPLEADO, LOCKER, MEMBRESIA, PAGO_MEMBRESIA y RUTINA).
+- **Atributo Compuesto:** El atributo de identificación personal en USUARIO se desglosa formalmente en NOMBRE, APELLIDO_PATERNO y APELLIDO_MATERNO para facilitar la búsqueda, ordenamiento y consistencia de registros.
 - **Atributo Multivalorado:** Los contactos telefónicos se modelan mediante la entidad independiente TELEFONO con relación 1:N respecto a USUARIO, permitiendo registrar múltiples números sin redundancia. 
 - **Atributo Derivado:** El atributo VIGENCIA DE SUSCRIPCIÓN en la transacción de pago se calcula dinámicamente sumando la DURACIÓN de la MEMBRESIA a la FECHA\_DE\_PAGO. 
 
