@@ -43,7 +43,7 @@ Para desplegar y verificar este proyecto se requiere:
 Abre tu terminal o consola Git y ejecuta:
 ```bash
 git clone [suspicious link removed]
-cd Tarea 6.2
+cd Actividades-de-Fundamentos-de-Bases-de-datos-/Unidad 6/Tarea 6.2
 ```
 
 ###
