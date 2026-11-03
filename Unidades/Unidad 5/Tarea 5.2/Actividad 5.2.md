@@ -96,12 +96,9 @@ WHERE Duracion\_Dias \<= 30;
 
 **Desglose Algorítmico de Tablas Intermedias:** 
 
-- **Paso 1 (Reunión ⋈):** R1 ← USUARIO ⋈\_(USUARIO.ID\_Usuario = 
+- **Paso 1 (Reunión ⋈):** R1 ← USUARIO ⋈\_(USUARIO.ID\_Usuario = TELEFONO.ID\_Usuario) TELEFONO Efectúa el emparejamiento entre la entidad fuerte USUARIO y su tabla satélite de primer oreden TELEFONO (derivada de la primera forma normal 1FN).
+- **Paso 2 (Proyección π):** Resultado ← π_(Nombre_Pila, Apellido_Paterno, CURP, Numero_Telefono) (R1) Proyecta las columnas de identificación personal junto con el número de contacto. Si un usuario posee 2 teléfonos, se generarán dos tuplas independientes. Esquema final: Resultado(Nombre_Pila, Apellido_Paterno, CURP, Numero_Telefono).
 
-| TELEFONO.ID\_Usuario)  |  | TELEFONO |
-| --- | --- | --- |
-| 1FN). |  |  |
-| CURP,  | Numero\_Telefono)  | (R1) |
 
 Proyecta las columnas de identificación personal junto con el número de contacto. Si un usuario posee 2 teléfonos, se generarán dos tuplas independientes. Esquema final: Resultado(Nombre\_Pila, Apellido\_Paterno, CURP, Numero\_Telefono). 
 
@@ -122,18 +119,11 @@ JOIN TELEFONO T ON U.ID\_Usuario = T.ID\_Usuario;
 **Desglose Algorítmico de Tablas Intermedias:** 
 
 - **Paso 1 (Selección σ):** R1 ← σ\_(Nivel\_Dificultad = 'Avanzado') (RUTINA) Filtra el catálogo de rutinas para seleccionar solo las de alta exigencia física. 
-- **Paso 2 (Reunión ⋈ con ASIGNACION\_RUTINA):** R2 ← R1 ⋈\_(R1.ID\_Rutina = ASIGNACION\_RUTINA.ID\_Rutina) ASIGNACION\_RUTINA 
-
-Vincula la rutina con la tabla intermedia asociativa 2FN. Esquema: 
-
-| R2(ID\_Rutina, Nombre\_Rutina, Nivel\_Dificultad,  | ID\_Cliente,  |
-| --- | --- |
-| Fecha\_Asignacion). |  |
-| USUARIO.ID\_Usuario)  | USUARIO |
-| identidad del socio. |  |
-| Nombre\_Rutina, Fecha\_Asignacion)  | (R3) |
-
-Esquema final: Resultado(Nombre\_Pila, Apellido\_Paterno, Nombre\_Rutina, Fecha\_Asignacion). 
+- **Paso 2 (Reunión ⋈ con ASIGNACION\_RUTINA):** R2 ← R1 ⋈\_(R1.ID\_Rutina = ASIGNACION\_RUTINA.ID\_Rutina) ASIGNACION\_RUTINA
+Vincula la rutina con la tabla intermedia asociativa 2FN. Esquema: R2(ID_Rutina, Nombre_Rutina, Nivel_Dificultad, ID_Cliente, Fecha_Asignacion).
+- **Paso 3 (Reunión con USUARIO):** R3 ← R2 ⋈_(R2.ID_Cliente = USUARIO.ID_Usuario) USUARIO Cruza la asignación con la tabla maestra de personas para extraer la identidad del socio.
+- **Paso 4 (Proyección π):** Resultado ← π_(Nombre_Pila, Apellido_Paterno, Nombre_Rutina, Fecha_Asignacion) (R3)
+Esquema final: Resultado(Nombre_Pila, Apellido_Paterno, Nombre_Rutina, Fecha_Asignacion).
 
 **Validación Declarativa en Transact-SQL (SQL Server):** 
 
