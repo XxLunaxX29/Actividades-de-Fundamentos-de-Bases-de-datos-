@@ -1,0 +1,67 @@
+flowchart TD
+    %% Concepto Raíz
+    NORM(["NORMALIZACIÓN DE BASES DE DATOS"])
+
+    %% Conectores y Categorías Principales
+    NORM -- "es un" --> CONCEPTO["Proceso sistemático de diseño relacional"]
+    NORM -- "se organiza en" --> FORMAS["Formas Normales"]
+    NORM -- "previene y resuelve" --> ANOMALIAS["Anomalías de Datos"]
+
+    %% Detalle del Concepto
+    CONCEPTO -- "cuyo objetivo es" --> OBJ1["Eliminar redundancia de datos"]
+    CONCEPTO -- "y garantizar" --> OBJ2["Integridad y consistencia de la información"]
+
+    %% Clasificación de Formas Normales
+    FORMAS -- "comprende nivel" --> BASICO["Nivel Básico"]
+    FORMAS -- "comprende nivel" --> AVANZADO["Nivel Intermedio y Avanzado"]
+
+    %% Nivel Básico: 1FN, 2FN, 3FN
+    BASICO -- "inicia con" --> FN1["1FN: Primera Forma Normal"]
+    FN1 -- "exige" --> R_FN1["Valores atómicos por celda y sin grupos repetitivos"]
+    FN1 -- "elimina" --> E_FN1["Listas o arreglos en una sola columna"]
+
+    BASICO -- "avanza a" --> FN2["2FN: Segunda Forma Normal"]
+    FN2 -- "exige estar en 1FN y cumplir" --> R_FN2["Dependencia funcional completa sobre la clave primaria"]
+    FN2 -- "elimina" --> E_FN2["Dependencias parciales en claves compuestas"]
+
+    BASICO -- "culmina en" --> FN3["3FN: Tercera Forma Normal"]
+    FN3 -- "exige estar en 2FN y suprimir" --> R_FN3["Dependencias funcionales transitivas"]
+    FN3 -- "elimina" --> E_FN3["Determinaciones indirectas entre atributos no clave"]
+
+    %% Nivel Intermedio y Avanzado: FNBC, 4FN, 5FN, 6FN
+    AVANZADO -- "incluye" --> FNBC["FNBC: Forma Normal de Boyce-Codd"]
+    FNBC -- "exige que todo" --> R_FNBC["Determinante funcional sea clave candidata o superclave"]
+    FNBC -- "resuelve" --> E_FNBC["Anomalías por claves compuestas superpuestas"]
+
+    AVANZADO -- "prosigue con" --> FN4["4FN: Cuarta Forma Normal"]
+    FN4 -- "exige estar en FNBC y suprimir" --> R_FN4["Dependencias multivaluadas independientes"]
+    FN4 -- "evita" --> E_FN4["Productos cartesianos y duplicación innecesaria de filas"]
+
+    AVANZADO -- "prosigue con" --> FN5["5FN: Quinta Forma Normal"]
+    FN5 -- "se fundamenta en" --> R_FN5["Dependencias de unión (Join Dependencies) válidas"]
+    FN5 -- "evita" --> E_FN5["Registros falsos o 'fantasma' al unir tablas con JOIN"]
+
+    AVANZADO -- "finaliza con" --> FN6["6FN: Sexta Forma Normal"]
+    FN6 -- "descompone la relación a" --> R_FN6["Estructuras irreducibles (Clave + 1 atributo máximo)"]
+    FN6 -- "facilita" --> E_FN6["Manejo de series temporales y datos históricos"]
+
+    %% Anomalías que resuelve
+    ANOMALIAS -- "como la" --> A_INS["Anomalía de Inserción"]
+    A_INS -- "consistente en" --> D_INS["Imposibilidad de registrar hechos válidos por falta de datos asociados"]
+
+    ANOMALIAS -- "como la" --> A_MOD["Anomalía de Modificación"]
+    A_MOD -- "consistente en" --> D_MOD["Incoherencias al actualizar información repetida en múltiples tuplas"]
+
+    ANOMALIAS -- "como la" --> A_BOR["Anomalía de Borrado"]
+    A_BOR -- "consistente en" --> D_BOR["Pérdida colateral y accidental de información crítica al eliminar un registro"]
+
+    %% Estilos de Diseño Conceptual
+    classDef root fill:#1A365D,stroke:#0F172A,stroke-width:2px,color:#FFFFFF,font-weight:bold,font-size:15px;
+    classDef concept fill:#2B6CB0,stroke:#1A365D,stroke-width:1.5px,color:#FFFFFF,font-weight:bold;
+    classDef subconcept fill:#E2E8F0,stroke:#4A5568,stroke-width:1.5px,color:#1A202C,font-weight:bold;
+    classDef rule fill:#F7FAFC,stroke:#A0AEC0,stroke-width:1px,color:#2D3748,font-size:12px;
+
+    class NORM root;
+    class CONCEPTO,FORMAS,ANOMALIAS concept;
+    class BASICO,AVANZADO,FN1,FN2,FN3,FNBC,FN4,FN5,FN6,A_INS,A_MOD,A_BOR subconcept;
+    class OBJ1,OBJ2,R_FN1,E_FN1,R_FN2,E_FN2,R_FN3,E_FN3,R_FNBC,E_FNBC,R_FN4,E_FN4,R_FN5,E_FN5,R_FN6,E_FN6,D_INS,D_MOD,D_BOR rule;
