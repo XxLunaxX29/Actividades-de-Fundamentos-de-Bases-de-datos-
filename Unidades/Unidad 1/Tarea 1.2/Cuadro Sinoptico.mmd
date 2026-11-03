@@ -1,0 +1,86 @@
+flowchart LR
+    %% Nodo Principal Raíz
+    ROOT["<b>BASES DE DATOS</b>"]
+
+    %% ==========================================
+    %% RAMA 1: SEGÚN EL CONTENIDO (1.png)
+    %% ==========================================
+    ROOT --> C1["<b>Según el contenido</b>"]
+
+    C1 --> C1_1["<b>Bibliográficas</b><br /><i>Base de datos orientada a la catalogación mediante metadatos de publicaciones o eventos.</i>"]
+    C1_1 --> C1_1_CAR["<b>Características:</b><br />• Contiene solo campos descriptivos (autor, título, fecha).<br />• No almacena el texto completo."]
+
+    C1 --> C1_2["<b>De Texto Completo</b><br /><i>Repositorio digital diseñado para albergar documentos o fuentes primarias en su totalidad.</i>"]
+    C1_2 --> C1_2_CAR["<b>Características:</b><br />• Soporta búsquedas avanzadas por palabras clave dentro del contenido íntegro.<br />• Uso científico."]
+
+    C1 --> C1_3["<b>Directorios</b><br /><i>Registro estructurado destinado a la organización de datos de contacto e identificación.</i>"]
+    C1_3 --> C1_3_CAR["<b>Características:</b><br />• Contiene campos básicos (nombres, teléfonos, correos).<br />• De consulta frecuente empresarial."]
+
+    %% ==========================================
+    %% RAMA 2: SEGÚN SU UBICACIÓN (2.png)
+    %% ==========================================
+    ROOT --> C2["<b>Según su ubicación</b>"]
+
+    C2 --> C2_1["<b>Centralizadas</b><br /><i>Los datos se almacenan en un único sitio o servidor físico al que acceden los usuarios.</i>"]
+    C2_1 --> C2_1_CAR["<b>Características:</b><br />• Punto único de fallo: si el servidor cae, todo el sistema colapsa.<br />• Escalabilidad vertical (ampliar recursos de la máquina).<br />• Administración simple: control directo y centralizado."]
+
+    C2 --> C2_2["<b>Distribuidas</b><br /><i>Los datos se almacenan en múltiples computadoras o nodos interconectados en red.</i>"]
+    C2_2 --> C2_2_CAR["<b>Características:</b><br />• Tolerancia a fallos: si un nodo cae, los demás continúan operando.<br />• Escalabilidad horizontal (añadir más nodos a la red).<br />• Transparencia: oculta la complejidad al usuario final."]
+
+    %% ==========================================
+    %% RAMA 3: SEGÚN LA VARIABILIDAD (3.png)
+    %% ==========================================
+    ROOT --> C3["<b>Según la variabilidad</b>"]
+
+    C3 --> C3_1["<b>Estáticas</b><br /><i>Sistema de almacenamiento acumulativo proyectado exclusivamente para consulta histórica.</i>"]
+    C3_1 --> C3_1_CAR["<b>Características:</b><br />• Operaciones de solo lectura (Read-Only).<br />• No admite modificaciones.<br />• Base para analítica."]
+
+    C3 --> C3_2["<b>Dinámicas</b><br /><i>Sistema de almacenamiento operativo sujeto a alteraciones continuas de la información.</i>"]
+    C3_2 --> C3_2_CAR["<b>Características:</b><br />• Soporta operaciones CRUD (Crear, Leer, Modificar, Eliminar).<br />• Actualización en tiempo real."]
+
+    C3 --> C3_3["<b>In-Memory</b><br /><i>Base de datos cuyo motor de almacenamiento reside directamente en la memoria RAM.</i>"]
+    C3_3 --> C3_3_CAR["<b>Características:</b><br />• Tiempos de respuesta extremadamente bajos (latencia mínima).<br />• Volatilidad de datos sin persistencia."]
+
+    %% ==========================================
+    %% RAMA 4: SEGÚN ADMINISTRACIÓN DE DATOS (4.png y 5.png)
+    %% ==========================================
+    ROOT --> C4["<b>Según Administración<br />de Datos</b>"]
+
+    %% Bloque 4.png
+    C4 --> C4_1["<b>Jerárquicas</b><br /><i>Organiza la información en una estructura en forma de árbol invertido.</i>"]
+    C4_1 --> C4_1_CAR["<b>Características:</b><br />• Nodos organizados en niveles (Raíz, Padre, Hijo).<br />• Relación estricta 1:N (un hijo solo tiene un padre).<br />• Rigidez estructural."]
+
+    C4 --> C4_2["<b>De Red</b><br /><i>Evolución del modelo jerárquico que permite interconexiones múltiples entre registros.</i>"]
+    C4_2 --> C4_2_CAR["<b>Características:</b><br />• Relaciones N:M (un nodo hijo puede tener varios padres).<br />• Reduce redundancia; alta complejidad de diseño."]
+
+    C4 --> C4_3["<b>Relacionales (SQL)</b><br /><i>Organiza la información en tablas compuestas por filas y columnas vinculadas entre sí.</i>"]
+    C4_3 --> C4_3_CAR["<b>Características:</b><br />• Uso del lenguaje estándar SQL.<br />• Claves primarias y foráneas.<br />• Cumplimiento estricto de consistencia (ACID)."]
+
+    C4 --> C4_4["<b>Transaccionales</b><br /><i>Motor optimizado para recolección, procesamiento y envío acelerado de datos.</i>"]
+    C4_4 --> C4_4_CAR["<b>Características:</b><br />• Alta velocidad de ejecución.<br />• Priorización de transferencias sin pérdida.<br />• Uso bancario e industrial."]
+
+    %% Bloque 5.png
+    C4 --> C4_5["<b>Multidimensionales</b><br /><i>Variantes del modelo relacional estructuradas en cubos de datos para análisis complejo.</i>"]
+    C4_5 --> C4_5_CAR["<b>Características:</b><br />• Organización en dimensiones y métricas.<br />• Base para procesamiento analítico en línea (OLAP)."]
+
+    C4 --> C4_6["<b>Orientadas a Objetos</b><br /><i>Almacena entidades completas encapsulando su estado y comportamiento.</i>"]
+    C4_6 --> C4_6_CAR["<b>Características:</b><br />• Integración directa con lenguajes POO.<br />• Evita el mapeo objeto-relacional.<br />• Admite estructuras complejas."]
+
+    C4 --> C4_7["<b>Documentales (NoSQL)</b><br /><i>Base de datos no relacional que utiliza documentos independientes como unidad.</i>"]
+    C4_7 --> C4_7_CAR["<b>Características:</b><br />• Formatos semiestructurados (JSON, BSON, XML).<br />• Esquema flexible (Schemaless).<br />• Alta escalabilidad horizontal."]
+
+    C4 --> C4_8["<b>Deductivas (Lógicas)</b><br /><i>Fundada en la lógica matemática capaz de aplicar inferencias sobre la información guardada.</i>"]
+    C4_8 --> C4_8_CAR["<b>Características:</b><br />• Utiliza el lenguaje Datalog.<br />• Aplica reglas y hechos.<br />• Permite derivar nueva información implícita."]
+
+    %% ==========================================
+    %% ESTILOS VISUALES PROFESIONALES
+    %% ==========================================
+    classDef rootStyle fill:#1A365D,stroke:#0F172A,stroke-width:2.5px,color:#FFFFFF,font-size:16px,font-weight:bold;
+    classDef catStyle fill:#2B6CB0,stroke:#1A365D,stroke-width:2px,color:#FFFFFF,font-size:14px,font-weight:bold;
+    classDef typeStyle fill:#EDF2F7,stroke:#4A5568,stroke-width:1.5px,color:#1A202C,font-size:12px;
+    classDef charStyle fill:#FFFFFF,stroke:#CBD5E1,stroke-width:1px,color:#334155,font-size:11px,text-align:left;
+
+    class ROOT rootStyle;
+    class C1,C2,C3,C4 catStyle;
+    class C1_1,C1_2,C1_3,C2_1,C2_2,C3_1,C3_2,C3_3,C4_1,C4_2,C4_3,C4_4,C4_5,C4_6,C4_7,C4_8 typeStyle;
+    class C1_1_CAR,C1_2_CAR,C1_3_CAR,C2_1_CAR,C2_2_CAR,C3_1_CAR,C3_2_CAR,C3_3_CAR,C4_1_CAR,C4_2_CAR,C4_3_CAR,C4_4_CAR,C4_5_CAR,C4_6_CAR,C4_7_CAR,C4_8_CAR charStyle;
