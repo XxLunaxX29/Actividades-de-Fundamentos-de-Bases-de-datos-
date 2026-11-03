@@ -1,0 +1,35 @@
+classDiagram 
+%% ========================================== 
+%% 1\. DEFINICIÓN DE CLASES Y ATRIBUTOS 
+%% ========================================== 
+
+class TipoUsuario { int idTipoUsuario string descripcion }
+
+class Usuario { int idUsuario string nombre string apellidoPaterno string apellidoMaterno }
+class Telefono { int idTelefono string numero string descripcion }
+class Cliente { string estado }
+class Empleado { string puesto float salario }
+class Membresia { int idMembresia string tipo float costo int duracion }
+class PagoMembresia { int idPago date fechaPago date vigenciaSuscripcion calcularVigencia() }
+class Locker { int idLocker string numeroLocker }
+class Rutina { int idRutina string dificultad string objetivo string descripcion }
+
+%% ========================================== 
+%% 2\. RELACIONES UML (HERENCIA, COMPOSICIÓN, AGREGACIÓN) 
+%% ==========================================
+Usuario <|-- Cliente : hereda 
+Usuario <|-- Empleado : hereda
+
+%% Composición (Atributo multivalorado dependiente) 
+Usuario "1" *-- "1..*" Telefono : posee
+%% Asociación simple con Tipo de Usuario 
+TipoUsuario "1" <-- "0..*" Usuario : clasifica
+%% Asociaciones de la Transacción de Cobro 
+Cliente "1" --> "0..*" PagoMembresia : realiza 
+Empleado "1" --> "0..*" PagoMembresia : atiende 
+Membresia "1" --> "0..*" PagoMembresia : contratada
+%% Agregación (Asignación de casillero a la contratación activa) 
+PagoMembresia "0..1" o-- "0..1" Locker : asigna 
+%% Asociaciones de Rutinas 
+Empleado "1" --> "0..*" Rutina : disena 
+Cliente "0..*" --> "0..\*" Rutina : asignada
