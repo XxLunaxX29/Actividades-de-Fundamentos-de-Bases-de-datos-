@@ -26,7 +26,7 @@ Versión estructurada en formato Markdown del informe completo de la actividad. 
 ---
 
 ### 3. `Mapa CONCEPTUAL UNIDAD 1 TAREA 1.1.txt`
-Archivo de texto plano con el código fuente del mapa conceptual en formato **Mermaid (`flowchart TD`)**. Permite importar, visualizar o editar directamente el diagrama que clasifica:
+Archivo con el código fuente del mapa conceptual en formato **Mermaid (`flowchart TD`)**. Permite importar, visualizar o editar directamente el diagrama que clasifica:
 * **Aplicaciones:** E-commerce, banca, hotelería, ERP/CRM e IA/Cloud.
 * **Conceptos Fundamentales:** Dato, información, campos, registros, DBMS, etc.
 * **Objetivos:** Reducción de redundancia, integridad, seguridad, acceso ágil, etc.
