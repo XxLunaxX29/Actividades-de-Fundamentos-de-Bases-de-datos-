@@ -21,17 +21,17 @@ Haz clic en el enlace de cualquier tarea para ir **directamente al interior de s
 | Unidad | Actividad | Enlace Directo |
 | :--- | :--- | :--- |
 | **Unidad 1** | **Tarea 1.1** | [📁 Ir a Tarea 1.1](./Unidad%201/Tarea%201.1) |
-| | **Tarea 1.2** | [📁 Ir a Tarea 1.2](./Unidades/Unidad%201/Tarea%201.2) |
-| **Unidad 2** | **Tarea 2.1** | [📁 Ir a Tarea 2.1](./Unidades/Unidad%202/Tarea%202.1) |
-| | **Tarea 2.2** | [📁 Ir a Tarea 2.2](./Unidades/Unidad%202/Tarea%202.2) |
-| **Unidad 3** | **Tarea 3.1** | [📁 Ir a Tarea 3.1](./Unidades/Unidad%203/Tarea%203.1) |
-| | **Tarea 3.2** | [📁 Ir a Tarea 3.2](./Unidades/Unidad%203/Tarea%203.2) |
-| **Unidad 4** | **Tarea 4.1** | [📁 Ir a Tarea 4.1](./Unidades/Unidad%204/Tarea%204.1) |
-| | **Tarea 4.2** | [📁 Ir a Tarea 4.2](./Unidades/Unidad%204/Tarea%204.2) |
-| **Unidad 5** | **Tarea 5.1** | [📁 Ir a Tarea 5.1](./Unidades/Unidad%205/Tarea%205.1) |
-| | **Tarea 5.2** | [📁 Ir a Tarea 5.2](./Unidades/Unidad%205/Tarea%205.2) |
-| **Unidad 6** | **Tarea 6.1** | [📁 Ir a Tarea 6.1](./Unidades/Unidad%206/Tarea%206.1) |
-| | **Tarea 6.2** | [🚀 Ir a Tarea 6.2](./Unidades/Unidad%206/Tarea%206.2) |
+| | **Tarea 1.2** | [📁 Ir a Tarea 1.2](./Unidad%201/Tarea%201.2) |
+| **Unidad 2** | **Tarea 2.1** | [📁 Ir a Tarea 2.1](./Unidad%202/Tarea%202.1) |
+| | **Tarea 2.2** | [📁 Ir a Tarea 2.2](./Unidad%202/Tarea%202.2) |
+| **Unidad 3** | **Tarea 3.1** | [📁 Ir a Tarea 3.1](./Unidad%203/Tarea%203.1) |
+| | **Tarea 3.2** | [📁 Ir a Tarea 3.2](./Unidad%203/Tarea%203.2) |
+| **Unidad 4** | **Tarea 4.1** | [📁 Ir a Tarea 4.1](./Unidad%204/Tarea%204.1) |
+| | **Tarea 4.2** | [📁 Ir a Tarea 4.2](./Unidad%204/Tarea%204.2) |
+| **Unidad 5** | **Tarea 5.1** | [📁 Ir a Tarea 5.1](./Unidad%205/Tarea%205.1) |
+| | **Tarea 5.2** | [📁 Ir a Tarea 5.2](./Unidad%205/Tarea%205.2) |
+| **Unidad 6** | **Tarea 6.1** | [📁 Ir a Tarea 6.1](./Unidad%206/Tarea%206.1) |
+| | **Tarea 6.2** | [🚀 Ir a Tarea 6.2](./Unidad%206/Tarea%206.2) |
 
 ---
 
