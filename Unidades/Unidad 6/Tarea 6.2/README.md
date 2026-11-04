@@ -54,11 +54,3 @@ start 02_data_inserts.sql
 start 03_queries_dml.sql
 ```
 ###
-
-Abre tu terminal o consola Git y ejecuta:
-```bash
-git clone [suspicious link removed]
-cd Actividades-de-Fundamentos-de-Bases-de-datos-/Unidad 6/Tarea 6.2
-```
-
-###
