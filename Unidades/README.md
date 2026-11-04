@@ -20,7 +20,7 @@ Haz clic en el enlace de cualquier tarea para ir **directamente al interior de s
 
 | Unidad | Actividad | Enlace Directo |
 | :--- | :--- | :--- |
-| **Unidad 1** | **Tarea 1.1** | [📁 Ir a Tarea 1.1](./Unidades/Unidad%201/Tarea%201.1) |
+| **Unidad 1** | **Tarea 1.1** | [📁 Ir a Tarea 1.1](./Unidad%201/Tarea%201.1) |
 | | **Tarea 1.2** | [📁 Ir a Tarea 1.2](./Unidades/Unidad%201/Tarea%201.2) |
 | **Unidad 2** | **Tarea 2.1** | [📁 Ir a Tarea 2.1](./Unidades/Unidad%202/Tarea%202.1) |
 | | **Tarea 2.2** | [📁 Ir a Tarea 2.2](./Unidades/Unidad%202/Tarea%202.2) |
