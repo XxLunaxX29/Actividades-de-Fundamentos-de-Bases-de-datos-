@@ -20,7 +20,7 @@ Haz clic en cualquiera de las unidades o temas para navegar directamente a su ca
 | Unidad | Temática Principal | Acceso Directo |
 | :--- | :--- | :--- |
 **Unidad 1**
-[ Abrir Tarea 1.1](./Unidades/Unidad_1%201) 
+[ Abrir Tarea 1.1](./Unidades/Unidad_1/Tarea_1.1%201) 
 **Unidad 2** [ Abrir Unidad 2](./Unidades/Unidad%202) 
 **Unidad 3** [ Abrir Unidad 3](./Unidades/Unidad%203) 
 **Unidad 4** [ Abrir Unidad 4](./Unidades/Unidad%204) 
