@@ -1,4 +1,4 @@
-```
+
 # 🗄️ Fundamentos de Bases de Datos — Portafolio de Actividades
 
 Este repositorio concentra las evidencias de aprendizaje, actividades teóricas, diagramas conceptuales, investigaciones y scripts de implementación de la materia **Fundamentos de Bases de Datos**.
@@ -59,4 +59,3 @@ cd "Actividades-de-Fundamentos-de-Bases-de-datos-/Unidades/Unidad 6/Tarea 6.2"
 # 3. Entrar a cualquier otra tarea (ejemplo: Tarea 1.1)
 cd "Actividades-de-Fundamentos-de-Bases-de-datos-/Unidades/Unidad 1/Tarea 1.1"
 
-```
