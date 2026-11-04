@@ -20,7 +20,7 @@ Haz clic en el enlace de cualquier tarea para ir **directamente al interior de s
 
 | Unidad | Actividad | Temática / Entregable | Enlace Directo |
 | :--- | :--- | :--- | :--- |
-| **Unidad 1** | **Tarea 1.1** | Introducción a BD, Modelado Conceptual y Cuadro Sinóptico | [📁 Ir a Tarea 1.1](./Unidades/Unidad%201/Tarea%201.1) |
+| **Unidad 1** | **Tarea 1.1** | Introducción a BD, Modelado Conceptual y Cuadro Sinóptico | [📁 Ir a Tarea 1.1](.Actividades-de-Fundamentos-de-Bases-de-datos-/Unidades/Unidad%201/Tarea%201.1) |
 | | **Tarea 1.2** | Fuentes Vectoriales y Diagramación | [📁 Ir a Tarea 1.2](./Unidades/Unidad%201/Tarea%201.2) |
 | **Unidad 2** | **Tarea 2.1** | Modelo Entidad-Relación Extendido (EER) y Cardinalidades | [📁 Ir a Tarea 2.1](./Unidades/Unidad%202/Tarea%202.1) |
 | | **Tarea 2.2** | Transformación de Modelo EER a Esquema Relacional y UML | [📁 Ir a Tarea 2.2](./Unidades/Unidad%202/Tarea%202.2) |
