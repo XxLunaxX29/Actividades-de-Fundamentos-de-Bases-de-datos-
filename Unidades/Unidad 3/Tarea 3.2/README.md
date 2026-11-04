@@ -37,7 +37,6 @@ Reporte íntegro en formato Markdown. Contiene el cuerpo teórico completo, el d
 ---
 
 ### 3. `Squema.sql`
-*(Provisto como `.txt` para lectura directa en el entorno)*  
 Script formal de lenguaje de definición de datos (**DDL**) estructurado y probado para su ejecución en **Microsoft SQL Server Express**:
 * Sentencias de creación y activación: `CREATE DATABASE GIMNASIO; GO USE GIMNASIO; GO`.
 * Creación secuencial de las 10 tablas respetando el orden estricto de dependencias e integridad referencial.
