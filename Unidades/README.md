@@ -19,12 +19,13 @@ Haz clic en cualquiera de las unidades o temas para navegar directamente a su ca
 
 | Unidad | Temática Principal | Acceso Directo |
 | :--- | :--- | :--- |
-| **Unidad 1** | Introducción a los Sistemas de Bases de Datos y Modelado Conceptual | [ Abrir Unidad 1](./Unidades/Unidad%201) |
-| **Unidad 2** | Modelo Entidad-Relación (EER), Cardinalidades y Transformación a Tablas | [ Abrir Unidad 2](./Unidades/Unidad%202) |
-| **Unidad 3** | Modelo Relacional y Normalización de Esquemas (1FN, 2FN, 3FN, FNBC) | [ Abrir Unidad 3](./Unidades/Unidad%203) |
-| **Unidad 4** | Álgebra Relacional y Operaciones Formales de Consulta | [ Abrir Unidad 4](./Unidades/Unidad%204) |
-| **Unidad 5** | Lenguaje de Definición de Datos (LDD / DDL) y Restricciones de Dominio | [/Abrir Unidad 5](./Unidades/Unidad%205) |
-| **Unidad 6** | Lenguaje de Manipulación de Datos (LMD / DML) y Pruebas de Integridad | [ Abrir Unidad 6](./Unidades/Unidad%206) |
+**Unidad 1**
+[ Abrir Tarea 1.1](./Unidades/Unidad_1%201) 
+**Unidad 2** [ Abrir Unidad 2](./Unidades/Unidad%202) 
+**Unidad 3** [ Abrir Unidad 3](./Unidades/Unidad%203) 
+**Unidad 4** [ Abrir Unidad 4](./Unidades/Unidad%204) 
+**Unidad 5** [/Abrir Unidad 5](./Unidades/Unidad%205) 
+**Unidad 6** [ Abrir Unidad 6](./Unidades/Unidad%206) 
 
 ---
 
